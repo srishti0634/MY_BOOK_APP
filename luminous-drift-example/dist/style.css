@@ -1,0 +1,300 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300);
+/* Foreground color for text and UI elements */
+/* 20% lighter */
+/* 20% darker */
+/* Used for borders, dividers, etc. */
+/* 10% lighter */
+/* 10% darker */
+/*--- Inverted Colors ---*/
+/* Background color */
+/* 10% lighter */
+/* 10% darker */
+/* Foreground color for text and UI elements */
+/* Used for borders, dividers, etc. */
+/* 10% lighter */
+/* 10% darker */
+/*--- Accent Colors ---*/
+/* Primary accent color (orange) */
+/* 10% lighter */
+/* 10% darker */
+/* 20% lighter */
+/* 20% darker */
+/* Secondary accent color (blue) */
+/* 10% lighter */
+/* 10% darker */
+/* 20% lighter */
+/* 20% darker */
+/* Tertiary accent colors */
+/* H:156 S:82 B:89 */
+/* 20% lighter */
+/* 10% darker */
+/* Basic */
+body {
+  color: #475F72;
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", "sans";
+  font-size: 16px;
+  margin: 0 0 0 0;
+  text-rendering: optimizeLegibility;
+}
+
+article {
+  margin: 2em auto 0 auto;
+  max-width: 40em;
+}
+article > img {
+  max-width: 100%;
+}
+article figure img {
+  max-width: 100%;
+}
+
+article:first-child {
+  margin-top: 0;
+}
+
+article:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+figure {
+  margin: 2em 0;
+  padding: 0;
+}
+figure figcaption {
+  color: #b2bec8;
+  font-size: 1em;
+  padding-top: 1em;
+}
+
+figure:first-child {
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 1em;
+  text-align: left;
+  color: #475F72;
+  line-height: 1.45;
+}
+
+p a {
+  border-bottom: solid 1px #00C0FA;
+  color: #00C0FA;
+  text-decoration: none;
+}
+p a:active {
+  background-color: #00C0FA;
+  border-bottom: solid 1px #00C0FA;
+  color: #FFF;
+}
+p a:hover {
+  border-bottom: dotted 1px #2ecfff;
+  color: #2ecfff;
+}
+
+section {
+  padding: 2em 0 0;
+}
+
+ul, ol {
+  color: #475F72;
+  margin-bottom: 1em;
+}
+ul li, ol li {
+  margin-bottom: 0.5em;
+}
+ul li:last-child, ol li:last-child {
+  margin-bottom: 0;
+}
+
+.content {
+  margin-top: 2em;
+  clear: both;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+@media (min-width: 768px) {
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+section.content:first-child {
+  padding-top: 0;
+}
+
+/* Single Line Code View for Imgix URLs*/
+
+.responsive {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border-top: solid 10px #00C0FA;
+  color: #00C0FA;
+  position: relative;
+  line-height: 1.4;
+  font-weight: 100;
+}
+
+.responsive:before {
+  content: "⇄";
+  position: absolute;
+  right: 20px;
+}
+
+.responsive:after {
+  font-size: 100%;
+  vertical-align: baseline;
+  font-weight: 400;
+}
+
+/* Wider than desktop */
+@media (min-width: 1200px) {
+  .responsive {
+    border-top: solid 10px #00C0FA;
+  }
+
+  .responsive:after {
+    content: "Large Desktop";
+    font-size: 100%;
+  }
+}
+/* Landscape phone to desktop */
+@media (max-width: 1199px) {
+  .responsive {
+    border-top: solid 10px #2ecfff;
+  }
+
+  .responsive:after {
+    content: "Desktop";
+    font-size: 100%;
+  }
+}
+/* Landscape phone to landscape tablet */
+@media (max-width: 979px) {
+  .responsive {
+    border-top: solid 10px #00C0FA;
+  }
+
+  .responsive:after {
+    content: "Landscape Tablet";
+    font-size: 100%;
+  }
+}
+/* Small desktop */
+@media (min-width: 980px) and (max-width: 1199px) {
+  .responsive:after {
+    content: "Small desktop";
+    font-size: 100%;
+  }
+}
+/* Portrait tablet to landscape tablet */
+@media (min-width: 768px) and (max-width: 979px) {
+  .responsive {
+    border-top: solid 10px #0099c7;
+  }
+
+  .responsive:after {
+    content: "Portrait Tablet";
+    font-size: 100%;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .responsive {
+    font-size: 14px;
+    border-top: solid 10px #0099c7;
+  }
+
+  .responsive:after {
+    content: "Landscape Phone";
+    font-size: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .responsive {
+    font-size: 12px;
+    text-align: left;
+    border-top: solid 10px #0099c7;
+  }
+
+  .responsive:after {
+    content: "Portrait Phone";
+  }
+}
+figure {
+  text-align: center;
+}
+
+picture {
+  text-align: center;
+}
+
+.demo-area {
+  background: #FAFAFA;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.demo-trigger {
+  display: inline-block;
+  width: 40%;
+  float: left;
+  cursor: zoom-in;
+}
+
+.demo-trigger img {
+  max-width: 100%;
+}
+
+.detail {
+  position: relative;
+  width: 55%;
+  margin-left: 5%;
+  float: left;
+  min-height: 240px;
+}
+
+@media (max-width: 900px) {
+  .detail, .demo-trigger {
+    float: none;
+  }
+
+  .demo-trigger {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    cursor: zoom-in;
+  }
+
+  .detail {
+    text-align: center;
+    margin: 0 auto;
+    min-height: 0;
+    width: 100%;
+    max-width: 32em;
+  }
+  .detail h3 {
+    margin-top: 1em;
+  }
+
+  p {
+    margin: 0 auto 1em;
+  }
+
+  ul {
+    text-align: left;
+  }
+
+  .responsive-hint {
+    display: none;
+  }
+}

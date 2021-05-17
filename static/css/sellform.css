@@ -1,0 +1,38 @@
+body{
+    background-image: url("../../static/pics/b2.jpg");
+}
+.styling{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+a{
+    margin-right: 5px;
+    font-size: 1em;
+    padding: 2px;
+}
+h1{
+    font-size: 3em;
+    color:lightgoldenrodyellow;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+label{
+    font-size: 1em;
+    color:lightgoldenrodyellow;
+    font-weight: bold;
+    margin-right: 5px;
+}
+#id_description, #id_types, #id_tags, #id_discount{
+    border-radius: 12px;
+}
+#in{
+    border-radius: 14px;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+} 
+input{
+    border-radius: 15px;
+}

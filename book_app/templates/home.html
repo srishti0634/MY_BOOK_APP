@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Sucess{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static '/css/home.css' %}">
+<div class="first">
+  <img src="{% static '/pics/first_logo.jpg' %}" alt="awwwwsnap" style="width:100%;height:500px;">
+  <div class="centered"><h1>Lets Change The World Into A Library</h1></div>
+</div>
+
+<!-- SECOND -->
+
+<div class="container">
+  <h1>What do we provide</h1>
+  <div class="row">
+    <div class="col">
+      <img style="float: right;" src="{% static '/pics/lend_borrow.jpg' %}" alt="">
+    </div>
+    <div class="col" style="text-align:left">
+      <h4>Books are unread until you it is shared with other readers</h4>
+      <p>
+        “A book lying idle on a shelf is wasted ammunition. Like money, books must be kept in constant circulation. Lend and borrow to the maximum.”<br>
+        — Henry Miller<br>
+        Get the nearest lender or borrower with just few clicks and communicate to him/her through our platform.Donot throw books share it and make dreams come true.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col"  style="text-align:right">
+      <h4>Buy a book at a much lower cost and effort</h4>
+      <p>
+        Yes, buy the book you want to explore at a much lower price without spending time in the market to bargain.Our site finds the nearest seller to you with a discounted price as per our policy.Spend money on books and help others in changing the world.That's the thing about books.They let you travel without moving your feet.
+      </p>
+    </div>
+    <div class="col" style="text-align:center">
+      <img src="{% static '/pics/buy_book.png' %}" alt="">
+    </div>
+  </div>
+</div>
+
+{% endblock %}

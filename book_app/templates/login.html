@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static '/css/login.css' %}">
+
+<form method="post">
+  {% csrf_token %}
+  <div class="styling">
+    <h1>Login Here!</h1>
+    <p><label for="id_username">Username : </label> <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username"></p>
+    <p><label for="id_password">Password :  </label> <input type="password" name="password" autocomplete="current-password" required="" id="id_password"></p>
+    <button type="submit" class="btn btn-outline-warning">Login</button>
+    <a class="btn btn-outline-warning" href="{% provider_login_url "google" %}">LOGIN USING GOOGLE</a>
+    <caption><b>If not a user ? </b></caption><a href="{% url 'sign_up' %}">Register Here</a>
+  </div>
+</form>
+
+{% endblock %}

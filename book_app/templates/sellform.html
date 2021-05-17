@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Sell Form Page{% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static '/css/sellform.css' %}">
+
+<div class="container">
+  <h1>Please Fill The Sellers Form!</h1>
+  <form class="styling" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input id="in" class="btn btn-outline-warning" type="submit" value="Sell">
+  </form>
+</div>
+{% endblock %}

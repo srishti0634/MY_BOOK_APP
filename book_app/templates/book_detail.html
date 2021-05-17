@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static '/css/book_detail.css' %}">
+<link rel="stylesheet" href="https://awik.io/demo/webshop-zoom/drift-basic.min.css">
+
+{% for book in books %}
+<div id="col-1">
+  <img class="drift-demo-trigger" data-zoom="{{book.photo.url}}" src="{{book.photo.url}}"><br>
+  <caption>( Cursor over image for a clearer view )</caption>
+</div>
+<div id="col-2">
+  <div id="left">
+    <h2><u>{{ book.book_name }}</u></h2>
+    <p><b>Description : </b>{{ book.description }}</p>
+    <p><b><u>SPECIFICATIONS :-</u></b></p>
+    <p><b>Author Name :</b> {{book.author}}</p>
+    <p><b>Published By :</b> {{book.published_by}}</p>
+    <p><b>Book Type :</b> {{book.types}}</p>
+    <p><b>Book genre/tag :</b> {{book.tags}}</p>
+    <p><b>Original Price :</b> {{original}}</p>
+    <p><b>Selling Price :</b> {{selling}}</p>
+    <a href="{% url 'add_to_cart' book.id %}" class="btn btn-info"> ADD TO CART </a>
+    <a href="#" class="btn btn-info"> PURCHASE THE BOOK </a>
+  </div>
+  <div id="right">
+    <div id="details-container">
+    </div>
+  </div>
+</div>
+
+
+
+{% endfor %}
+
+<script src="https://awik.io/demo/webshop-zoom/Drift.min.js"></script>
+<script src="{% static '/js/book_detail.js' %}"></script>
+
+{% endblock %}

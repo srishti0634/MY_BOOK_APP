@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Signup Page{% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static '/css/register.css' %}">
+
+<div class="container">
+  <h1>Register Here!</h1>
+  <form class="styling" method="post">
+    {% csrf_token %}
+    <p><label for="id_firstname">Firstname : </label> <input type="text" name="firstname" maxlength="30" required="" id="id_firstname"></p>
+    <p><label for="id_lastname">Lastname : </label> <input type="text" name="lastname" maxlength="30" required="" id="id_lastname"></p>
+    <p><label for="id_username">Username : </label> <input type="text" name="username" maxlength="30" required="" id="id_username"></p>
+    <p><label for="id_email">Email :  </label> <input type="email" name="email" maxlength="100" required="" id="id_email"></p>
+    <p><label for="id_user_pin">Pincode :  </label> <input type="text" name="user_pin" maxlength="6" required="" id="id_user_pin"></p>
+    <p><label for="id_phone">Phone : </label> <input type="text" name="phone" maxlength="15" required="" id="id_phone"></p>
+    <p><label for="id_password">Password : </label> <input type="password" name="password" maxlength="32" required="" id="id_password"></p>
+    <input id="in" class="btn btn-outline-warning" type="submit" value="SignUp">
+    <caption><b> Do you already have an account? </b></caption><a href="{% url 'loginpage' %}">Login Here</a>
+  </form>
+</div>
+{% endblock %}

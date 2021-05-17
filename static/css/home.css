@@ -1,0 +1,24 @@
+.first {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Cairo', sans-serif;
+}
+.col img{
+  width: 80%;
+  display: block;
+  height: 200px;
+  border-radius: 20px;
+  filter: drop-shadow(5px 5px 5px #222);
+}
+.row div{
+  margin: 20px;
+  padding: 15px;
+}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static '/css/borrow.css' %}">
+
+<div id="wrapper">
+
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav" style="color: white;">
+      <li>
+        <a href="#">Price</a>
+      </li>
+      <li>
+        <a href="#">Tag</a>
+      </li>
+      <li>
+        <a href="#">Type</a>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <a href="#menu-toggle" class="btn btn-secondary float-right" id="menu-toggle">Filter Here-></a>
+      <h1 style="margin-bottom:40px;color:white;"><u>Search and explore your books</u></h1>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+        {% for book in books %}
+          <div class="col mb-4">
+            <div class="card h-100" style="filter: drop-shadow(13px 13px 13px #9c9a9a); border-radius:25px; background-color:black; border: 1px solid white; color:white;">
+              <img src="{{ book.photo.url }}" class="card-img-top" style="height: 10rem; border-radius:25px;" alt="{{book.book_name}}">
+              <div class="card-body">
+                <p class="card-title"><b>Book Name :</b> {{book.book_name}}</p>
+                <p class="card-text"><b>Author :</b> {{book.author}}</p>
+                <p class="card-text"><b>Published By :</b> {{book.published_by}}</p>
+                <a class="btn btn-warning" style="float:right;" href="{% url 'book_detail' book.id %}">View book-></a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+<!-- BORROW.JS -->
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.js'></script>
+<script src="{% static '/js/borrow.js' %}"></script>
+
+{% endblock %}
